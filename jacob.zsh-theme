@@ -46,6 +46,17 @@ screen_indicator() {
     fi
 }
 
+#
+# tmux indicator
+#
+# Show the window and pane number if the current session is running tmux.
+#
+tmux_indicator() {
+    if [ -n "$TMUX" ]; then
+        echo "%{$fg[green]%}⌘ $(echo $TMUX_PANE | sed 's/%//g' )%{$reset_color%}"
+    fi
+}
+
 ### PROMPTS
 
 # Left prompts
@@ -54,4 +65,4 @@ PROMPT='%{$fg[$NCOLOR]%}%n$(hostname_in_prompt)%{$fg[green]%}%{$reset_color%}: %
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 
 # Right prompts
-RPS1='$(git_custom_info)$(screen_indicator)'
+RPS1='$(git_custom_info)$(screen_indicator)$(tmux_indicator)'

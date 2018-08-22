@@ -47,6 +47,9 @@ autocmd BufWritePre * %s/\s\+$//e
 "       number of ws
 command! -nargs=1 -range SuperRetab <line1>,<line2>s/\v%(^ *)@<= {<args>}/\t/g
 
+" Auto-close HTML tags with <// + Space
+iabbrev <// </<C-X><C-O>
+
 " Hex editing
 command! Xxd %!xxd
 command! Xxdr %!xxd -r

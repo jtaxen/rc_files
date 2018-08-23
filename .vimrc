@@ -68,3 +68,6 @@ MapToggle <F7> relativenumber
 MapToggle <F8> ruler
 
 :nnoremap K i<Enter><Esc>
+
+" Show whitespaces as dots when enabeling list
+set listchars+=space:·

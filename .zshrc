@@ -8,6 +8,7 @@ plugins=(
     extract
     git
     z
+    zshmarks
 )
 
 source $ZSH/oh-my-zsh.sh

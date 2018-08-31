@@ -1,0 +1,6 @@
+# Change Caps Lock to ctrl
+setxkbmap -option ctrl:nocaps
+
+# Make short-pressed Caps Lock behave like Esc
+xcape -e 'Control_L=Escape'
+

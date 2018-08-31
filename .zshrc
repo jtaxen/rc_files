@@ -20,3 +20,9 @@ export EDITOR='vim'
 export SSH_KEY_PATH='~/.ssh/id_rsa'
 
 alias :q=exit
+
+# Start tmux if it is not already started
+if [ -z "$TMUX" ]; then
+    tmux
+fi
+

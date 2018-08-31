@@ -15,6 +15,7 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     "Plugin 'tpope/vim-fireplace'
     Plugin 'misterbuckley/vim-definitive'
+    Plugin 'mileszs/ack.vim'
 call vundle#end()
 filetype plugin indent on
 

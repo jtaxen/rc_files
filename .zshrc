@@ -26,3 +26,9 @@ if [ -z "$TMUX" ]; then
     tmux
 fi
 
+# Aliases for spotifycli commands
+alias sst='spotifycli --status'
+alias sn='spotifycli --next && sleep 1 && sst'
+alias spr='spotifycli --prev && sleep 1 && sst'
+alias spp='spotifycli --playpause'
+

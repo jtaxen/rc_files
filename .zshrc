@@ -23,7 +23,7 @@ alias :q=exit
 
 # Start tmux if it is not already started
 if [ -z "$TMUX" ]; then
-    tmux
+    command -v tmux >/dev/null && tmux
 fi
 
 # Aliases for spotifycli commands

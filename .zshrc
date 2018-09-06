@@ -32,3 +32,6 @@ alias sn='spotifycli --next && sleep 1 && sst'
 alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
+

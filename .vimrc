@@ -24,7 +24,6 @@ set number
 "set relativenumber
 filetype plugin indent on
 
-" For own keyboard layout
 noremap = $
 noremap + 0
 noremap <C-p> <C-u>
@@ -74,36 +73,43 @@ MapToggle <F8> ruler
 set listchars+=space:·
 
 " Colemak remappings
-noremap d g
-noremap e k
-noremap f e
-noremap g t
-noremap i l
-noremap j y
-noremap k n
-noremap l u
-noremap n j
-noremap o p
-noremap p r
-noremap r s
-noremap s d
-noremap t f
-noremap u i
-noremap y o
-noremap D G
-noremap E K
-noremap F E
-noremap G T
-noremap I L
-noremap J Y
-noremap K N
-noremap L U
-noremap N J
-noremap O P
-noremap P R
-noremap R S
-noremap S D
-noremap T F
-noremap U I
-noremap Y O
 
+" Movement
+noremap n j
+noremap e k
+noremap i l
+
+noremap d g
+noremap D G
+noremap dd gg
+
+noremap k n
+noremap K N
+
+noremap g t
+noremap G T
+noremap t f
+noremap T F
+
+noremap f e
+noremap F E
+
+" Mode shifting
+noremap u i
+
+" Yanking and pasting
+noremap s d
+noremap ss dd
+noremap T D
+noremap j y
+noremap J Y
+noremap y p
+noremap Y P
+
+" Undoing
+
+noremap l u
+
+" Editing
+
+noremap p r

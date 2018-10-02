@@ -5,6 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
     Plugin 'valloric/youcompleteme'
+    Plugin 'keith/swift.vim'
+    Plugin 'vim-syntastic/syntastic'
     "Plugin 'klen/python-mode'
     "Plugin 'jmcantrell/vim-virtualenv'
     Plugin 'pearofducks/ansible-vim'
@@ -113,3 +115,14 @@ noremap l u
 " Editing
 
 noremap p r
+
+" Recommended settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+

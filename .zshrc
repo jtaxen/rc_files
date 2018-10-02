@@ -1,5 +1,12 @@
 # Path to oh-my-zsh installation.
-export ZSH=/home/jacobtn/.oh-my-zsh
+if [[ -d /home/$USER/.oh-my-zsh ]]; then
+    export ZSH=/home/$USER/.oh-my-zsh
+elif [[ -d /Users/$USER/.oh-my-zsh ]]; then
+    export ZSH=/Users/$USER/.oh-my-zsh
+else
+    echo "Path to oh-my-zsh installation cannot be found."
+    exit 1
+fi
 
 ZSH_THEME="jacob"
 

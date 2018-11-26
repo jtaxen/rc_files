@@ -92,42 +92,22 @@ noremap n j
 noremap e k
 noremap i l
 
-noremap d g
-noremap D G
-noremap dd gg
-
 noremap k n
 noremap K N
 
-noremap g t
-noremap G T
-noremap t f
-noremap T F
-
-noremap f e
-noremap F E
+noremap p e
+noremap P E
 
 " Mode shifting
-noremap u i
+noremap l i
 
 " Yanking and pasting
-noremap s d
-noremap ss dd
-noremap T D
-noremap j y
-noremap J Y
-noremap y p
-noremap Y P
-
-" Undoing
-
-noremap l u
+noremap j p
+noremap J P
 
 " Editing
 
-noremap p r
 noremap N J
-noremap E i<Enter><Esc>
 
 " Recommended settings for Syntastic
 set statusline+=%#warningmsg#

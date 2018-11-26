@@ -20,6 +20,8 @@ call vundle#begin()
     Plugin 'misterbuckley/vim-definitive'
     " Ansible plugin
     Plugin 'pearofducks/ansible-vim'
+    " Asynchronous execution library
+    Plugin 'Shougo/vimproc.vim'
     " Sets 'path' for JVM languages (like clojure)
     Plugin 'tpope/vim-classpath'
     " Leiningen and Boot plugin

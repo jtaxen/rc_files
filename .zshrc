@@ -39,3 +39,6 @@ alias sn='spotifycli --next && sleep 1 && sst'
 alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

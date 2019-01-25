@@ -18,7 +18,7 @@ xkb_symbols "basic" {
     key <AE09> { [            9,   parenright,  leftsinglequotemark,  leftdoublequotemark ] };
     key <AE10> { [            0,        equal, rightsinglequotemark,  rightdoublequotemark ] };
     key <AE11> { [         plus,   dead_acute,          endash,           emdash ] };
-    key <AE12> { [        equal,     question,        multiply,         division ] };
+    key <AE12> { [        equal,     question,        question,         division ] };
 
     key <AD01> { [            q,            Q,      adiaeresis,       Adiaeresis ] };
     key <AD02> { [            w,            W,           aring,            Aring ] };
@@ -45,6 +45,7 @@ xkb_symbols "basic" {
     key <AC09> { [            i,            I,          iacute,           Iacute ] };
     key <AC10> { [            o,            O,          oacute,           Oacute ] };
     key <AC11> { [        slash,    backslash,      adiaeresis,       Adiaeresis ] };
+    key <AC12> { [   apostrophe,     asterisk ] };
 
     key <AB01> { [            z,            Z,              ae,               AE ] };
     key <AB02> { [            x,            X, dead_circumflex,       asciitilde ] };

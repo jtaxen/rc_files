@@ -31,7 +31,7 @@ xkb_symbols "basic" {
     key <AD09> { [            y,            Y,      udiaeresis,       Udiaeresis ] };
     key <AD10> { [  bracketleft,    braceleft,      odiaeresis,       Odiaeresis ] };
     key <AD11> { [ bracketright,   braceright,           aring,            Aring ] };
-    key <AD12> { [ dead_diaeresis, braceright,      asciitilde,        0x100203a ] };
+    key <AD12> { [ dead_diaeresis, asciicircum,      asciitilde,        0x100203a ] };
     key <BKSL> { [   apostrophe,   circumflex,      asciitilde,       asciitilde ] };
 
     key <AC01> { [            a,            A,          aacute,           Aacute ] };

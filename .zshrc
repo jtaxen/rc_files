@@ -14,6 +14,7 @@ ZSH_THEME="jacob"
 plugins=(
     extract
     git
+    history
     z
     zshmarks
 )

@@ -12,6 +12,7 @@ ZSH_THEME="jacob"
 
 # Oh-my-zsh plugins
 plugins=(
+    docker
     extract
     git
     history

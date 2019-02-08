@@ -9,6 +9,7 @@ else
 fi
 
 ZSH_THEME="jacob"
+ZSH_TMUX_AUTOSTART=true
 
 # Oh-my-zsh plugins
 plugins=(
@@ -16,6 +17,7 @@ plugins=(
     extract
     git
     history
+    tmux
     z
     zshmarks
 )
@@ -30,17 +32,11 @@ export SSH_KEY_PATH='~/.ssh/id_rsa'
 
 alias :q=exit
 
-# Start tmux if it is not already started
-if [ -z "$TMUX" ]; then
-    command -v tmux >/dev/null && tmux
-fi
-
 # Aliases for spotifycli commands
 alias sst='spotifycli --status'
 alias sn='spotifycli --next && sleep 1 && sst'
 alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

@@ -13,7 +13,9 @@ call vundle#begin()
     Plugin 'guns/vim-clojure-static'
     " Haskell plugins
     Plugin 'itchyny/vim-haskell-indent'
-    " Plugin 'eagletmt/ghcmod-vim'
+    Plugin 'eagletmt/ghcmod-vim'
+    " Julia plugin
+    Plugin 'julialang/julia-vim'
     " Ack - like perl-grep
     Plugin 'mileszs/ack.vim'
     " Find defenitions of vars, funcs etc
@@ -21,13 +23,15 @@ call vundle#begin()
     " Ansible plugin
     Plugin 'pearofducks/ansible-vim'
     " Asynchronous execution library
-    " Plugin 'Shougo/vimproc.vim'
+    Plugin 'Shougo/vimproc.vim'
     " Sets 'path' for JVM languages (like clojure)
     Plugin 'tpope/vim-classpath'
     " Leiningen and Boot plugin
     Plugin 'tpope/vim-salve'
+    " Kotlin plugin
+    Plugin 'udalov/kotlin-vim'
     " Code completion
-    " Plugin 'valloric/youcompleteme'
+    Plugin 'valloric/youcompleteme'
     " Syntax checking
     Plugin 'vim-syntastic/syntastic'
 call vundle#end()

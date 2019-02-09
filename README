@@ -1,1 +1,3 @@
 If anyone else can use these setups, they are not personalized enough.
+
+Keyboard layout file goes into `/usr/share/X11/xkb/symbols` on Ubuntu/Debian.

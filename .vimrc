@@ -16,6 +16,9 @@ call vundle#begin()
     Plugin 'eagletmt/ghcmod-vim'
     " Julia plugin
     Plugin 'julialang/julia-vim'
+    " Fuzzy search files
+    Plugin 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+    Plugin 'junegunn/fzf.vim'
     " Ack - like perl-grep
     Plugin 'mileszs/ack.vim'
     " Find defenitions of vars, funcs etc

@@ -14,6 +14,8 @@ call vundle#begin()
     " Haskell plugins
     Plugin 'itchyny/vim-haskell-indent'
     Plugin 'eagletmt/ghcmod-vim'
+    " Status bar colors
+    Plugin 'itchyny/lightline.vim'
     " Julia plugin
     Plugin 'julialang/julia-vim'
     " Fuzzy search files
@@ -139,3 +141,6 @@ let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
 
+" Lightline settings
+set laststatus=2
+set noshowmode

@@ -4,7 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
-
     " Vimscript linter
     Plugin 'dbakker/vim-lint'
     " Elm plugin inc. code formatting
@@ -25,6 +24,8 @@ call vundle#begin()
     Plugin 'mileszs/ack.vim'
     " Find defenitions of vars, funcs etc
     Plugin 'misterbuckley/vim-definitive'
+    " Color scheme
+    Plugin 'NLKNguyen/papercolor-theme'
     " Ansible plugin
     Plugin 'pearofducks/ansible-vim'
     " Asynchronous execution library
@@ -144,3 +145,10 @@ let g:elm_setup_keybindings = 1
 " Lightline settings
 set laststatus=2
 set noshowmode
+let g:lightline = {
+\    'colorscheme': 'PaperColor'
+\}
+
+" PaperColor settings
+set background=light
+colorscheme PaperColor

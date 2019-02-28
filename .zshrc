@@ -38,5 +38,10 @@ alias sn='spotifycli --next && sleep 1 && sst'
 alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
+# Use fd instead of find as fzf engine
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+

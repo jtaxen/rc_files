@@ -155,3 +155,5 @@ let g:lightline = {
 " PaperColor settings
 set background=light
 colorscheme PaperColor
+highlight Normal ctermbg=NONE
+highlight NonText ctermbg=NONE

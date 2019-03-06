@@ -133,6 +133,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Syntastic checkers
+let g:syntastic_python_checkers = ['flake8']
+
 " Recommended settings for Elm plugin
 let g:elm_syntastic_show_warnings = 1
 let g:elm_jump_to_error = 0

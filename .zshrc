@@ -42,6 +42,23 @@ alias spp='spotifycli --playpause'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 
+# Shortcut for activating virtualenvs
+vactivate() {
+    VENV_PATH="bin/activate"
+    if [ -f $VENV_PATH ]; then
+        source $VENV_PATH
+    else
+        VENV_PATH="venv/$VENV_PATH"
+        if [ -f $VENV_PATH ]; then
+            source $VENV_PATH
+        else
+            echo "No virtualenv found"
+            return 1
+        fi
+    fi
+    return 0
+}
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 

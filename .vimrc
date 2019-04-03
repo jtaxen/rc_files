@@ -116,7 +116,6 @@ noremap j p
 noremap J P
 
 " Editing
-
 noremap N J
 noremap E i<Enter>
 

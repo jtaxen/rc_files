@@ -18,14 +18,29 @@ plugins=(
     git
     history
     tmux
+    vi-mode
     z
-    zshmarks
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for remote and local sessions
 export EDITOR='vim'
+
+# Vi mode settings
+export KEYTIMEOUT=10
+
+bindkey -M vicmd 'n' down-line-or-history
+bindkey -M vicmd 'e' up-line-or-history
+bindkey -M vicmd 'i' vi-forward-char
+bindkey -M vicmd 'k' vi-repeat-search
+bindkey -M vicmd 'K' vi-rev-repeat-search
+bindkey -M vicmd 'p' vi-forward-word-end
+bindkey -M vicmd 'P' vi-forward-blank-word-end
+bindkey -M vicmd 'l' vi-insert
+bindkey -M vicmd 'j' vi-put-after
+bindkey -M vicmd 'J' vi-put-before
+bindkey -M vicmd 'N' vi-join
 
 # SSH
 export SSH_KEY_PATH='~/.ssh/id_rsa'

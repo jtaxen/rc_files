@@ -57,6 +57,16 @@ tmux_indicator() {
     fi
 }
 
+#
+# Vi model indicator
+#
+# Show an indicator if the vi mode is activated and in normal mode
+#
+vi_mode_indicator() {
+    MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
+    echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/} "
+}
+
 ### PROMPTS
 
 # Left prompts
@@ -65,4 +75,4 @@ PROMPT='%{$fg[$NCOLOR]%}%n$(hostname_in_prompt)%{$fg[green]%}%{$reset_color%}: %
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 
 # Right prompts
-RPS1='$(git_custom_info)$(screen_indicator)$(tmux_indicator)'
+RPS1='$(git_custom_info)$(vi_mode_indicator)$(screen_indicator)$(tmux_indicator)'

@@ -19,6 +19,7 @@ plugins=(
     history
     tmux
     vi-mode
+    web-search
     z
 )
 

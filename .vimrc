@@ -30,6 +30,8 @@ call vundle#begin()
     Plugin 'pearofducks/ansible-vim'
     " Asynchronous execution library
     Plugin 'Shougo/vimproc.vim'
+    " For avoiding repetition in normal mode
+    Plugin 'takac/vim-hardtime'
     " Sets 'path' for JVM languages (like clojure)
     Plugin 'tpope/vim-classpath'
     " Leiningen and Boot plugin
@@ -147,6 +149,13 @@ let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
 
+" Settings for Vim hardtime
+let g:hardtime_default_on = 1
+let g:hardtime_timeout = 2000
+let g:list_of_normal_keys = ["h", "n", "e", "i"]
+let g:list_of_visual_keys = ["h", "n", "e", "i"]
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+
 " Lightline settings
 set laststatus=2
 set noshowmode
@@ -159,3 +168,6 @@ set background=light
 colorscheme PaperColor
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
+
+set visualbell
+set noerrorbells

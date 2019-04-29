@@ -48,7 +48,7 @@ filetype plugin indent on
 syntax on
 set number
 "set relativenumber
-filetype plugin indent on
+set path+=**
 
 noremap € =
 noremap = $

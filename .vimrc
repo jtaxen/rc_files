@@ -30,8 +30,6 @@ call vundle#begin()
     Plugin 'pearofducks/ansible-vim'
     " Asynchronous execution library
     Plugin 'Shougo/vimproc.vim'
-    " For avoiding repetition in normal mode
-    Plugin 'takac/vim-hardtime'
     " Sets 'path' for JVM languages (like clojure)
     Plugin 'tpope/vim-classpath'
     " Leiningen and Boot plugin

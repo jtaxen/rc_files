@@ -1,0 +1,11 @@
+
+daemonize
+
+h cut-left
+n cut-down
+e cut-up
+i cut-right
+shift+h move-left
+shift+n move-down
+shift+e move-up
+shift+i move-right

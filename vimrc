@@ -50,6 +50,7 @@ set path+=**
 
 noremap € =
 noremap = $
+noremap $ =
 noremap + 0
 noremap <C-p> <C-u>
 

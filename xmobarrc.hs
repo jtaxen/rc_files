@@ -8,5 +8,5 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                     , Run BatteryP ["BAT0"] [] 600
                     ]
        , alignSep = "}{"
-       , template = "}{ %battery% \t %date% \t"
+       , template = "}{ %battery%      %date%    "
        }

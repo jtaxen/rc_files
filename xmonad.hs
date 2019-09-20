@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Hooks.SetWMName
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 
@@ -12,6 +13,7 @@ spotifyNext = spotifyRootCommand ++ "/org/mpris/MediaPlayer2 org.mpris.MediaPlay
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig { terminal = "tilda"
+                           , startupHook = setWMName "LG3D"
     } `additionalKeys` myKeys
   where
     myKeys = [ ((myModMask, xK_u), spawn "slock")

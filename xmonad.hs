@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Hooks.SetWMName
+import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 
@@ -12,12 +13,15 @@ spotifyNext = spotifyRootCommand ++ "/org/mpris/MediaPlayer2 org.mpris.MediaPlay
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $ defaultConfig { terminal = "tilda"
+    xmonad $ defaultConfig { terminal = "urxvt"
                            , startupHook = setWMName "LG3D"
+                           , manageHook = manageDocks <+> manageHook defaultConfig
+                           , layoutHook = avoidStruts $ layoutHook defaultConfig
+                           , borderWidth = 0
     } `additionalKeys` myKeys
   where
     myKeys = [ ((myModMask, xK_u), spawn "slock")
-             , ((myModMask, xK_p), spawn "rofi -show run -m DVI-I-1-1")
+             , ((myModMask, xK_p), spawn "rofi -show run")
              , ((0, 0x1008ff13), spawn "amixer -q -D pulse sset Master 4%+")
              , ((0, 0x1008ff11), spawn "amixer -q -D pulse sset Master 4%-")
              , ((0, 0x1008ff14), spawn spotifyPlayPauseToggle)

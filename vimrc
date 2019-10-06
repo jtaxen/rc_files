@@ -4,8 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
-    " Vimscript linter
-    Plugin 'dbakker/vim-lint'
     " Elm plugin inc. code formatting
     Plugin 'elmcast/elm-vim'
     " Clojure plugin
@@ -14,7 +12,8 @@ call vundle#begin()
     Plugin 'itchyny/vim-haskell-indent'
     Plugin 'eagletmt/ghcmod-vim'
     " Status bar colors
-    Plugin 'itchyny/lightline.vim'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
     " Julia plugin
     Plugin 'julialang/julia-vim'
     " Fuzzy search files
@@ -25,17 +24,14 @@ call vundle#begin()
     " Find defenitions of vars, funcs etc
     Plugin 'misterbuckley/vim-definitive'
     " Color scheme
+    Plugin 'lifepillar/vim-solarized8'
     Plugin 'NLKNguyen/papercolor-theme'
-    " Ansible plugin
-    Plugin 'pearofducks/ansible-vim'
     " Asynchronous execution library
     Plugin 'Shougo/vimproc.vim'
     " Sets 'path' for JVM languages (like clojure)
     Plugin 'tpope/vim-classpath'
     " Leiningen and Boot plugin
     Plugin 'tpope/vim-salve'
-    " Kotlin plugin
-    Plugin 'udalov/kotlin-vim'
     " Code completion
     Plugin 'valloric/youcompleteme'
     " Syntax checking
@@ -158,15 +154,20 @@ let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 " Lightline settings
 set laststatus=2
 set noshowmode
-let g:lightline = {
-\    'colorscheme': 'PaperColor'
-\}
 
-" PaperColor settings
+" Color theme settings
 set background=light
+" let g:PaperColor_Theme_Options = {
+" \    'theme': {
+" \        'default.light': {
+" \            'override': {
+" \                'color00': ['#E0E0E0', '']
+" \            }
+" \        }
+" \    }
+" \}
 colorscheme PaperColor
-highlight Normal ctermbg=NONE
-highlight NonText ctermbg=NONE
+let g:airline_theme='papercolor'
 
 set visualbell
 set noerrorbells

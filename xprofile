@@ -1,18 +1,23 @@
+### MONITORS @@@
+xrandr --output HDMI1 --mode 3840x2160
+
+# Set wallpaper
+feh --bg-scale "$HOME/Pictures/iwanttobelieve.png"
+
+
+### KEYBOARD ###
+
 setxkbmap -layout us
 
-if [ -n "$(xrandr | ack DVI-I-1-1)" ]; then
-    xrandr --output DVI-I-1-1 --auto --right-of eDP-1
-fi
-
-if [ -n "$(xrandr | ack DVI-I-2-2)" ]; then
-    xrandr --output DVI-I-2-2 --auto --right-of DVI-I-1-1
-fi
-
-feh --bg-scale $HOME/Pictures/Alopex_lagopus_IMG_9019.JPG &
-
 # Change Caps Lock to ctrl
-# setxkbmap -option ctrl:nocaps
+setxkbmap -option ctrl:nocaps
 
 # Make short-pressed Caps Lock behave like Esc
-# xcape -e 'Control_L=Escape'
+xcape -e 'Control_L=Escape'
+
+
+
+### MOUSE ###
+keynav
+unclutter &
 

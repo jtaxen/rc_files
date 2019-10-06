@@ -11,10 +11,13 @@ fi
 ZSH_THEME="jacob"
 ZSH_TMUX_AUTOSTART=true
 
+export FZF_BASE=/usr/share/fzf
+
 # Oh-my-zsh plugins
 plugins=(
     docker
     extract
+    fzf
     git
     history
     tmux

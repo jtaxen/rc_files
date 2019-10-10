@@ -1,5 +1,5 @@
 --color
---color-match=on_white
+--color-match=black on_yellow
 --color-filename=green
 --color-lineno=blue
 

@@ -1,0 +1,4 @@
+
+rofi.theme: /usr/share/rofi/themes/papercolor.rasi
+
+rofi*font: FantasqueSansMono 11

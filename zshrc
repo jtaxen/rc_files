@@ -11,7 +11,6 @@ fi
 ZSH_THEME="jacob"
 ZSH_TMUX_AUTOSTART=true
 
-export FZF_BASE=/usr/share/fzf
 
 # Oh-my-zsh plugins
 plugins=(
@@ -56,6 +55,10 @@ alias sst='spotifycli --status'
 alias sn='spotifycli --next && sleep 1 && sst'
 alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
+
+# fzf
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 # Use fd instead of find as fzf engine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

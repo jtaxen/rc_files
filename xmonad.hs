@@ -1,7 +1,6 @@
 import XMonad
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 
 myModMask = mod1Mask
@@ -12,7 +11,6 @@ spotifyPlayPauseToggle = spotifyRootCommand ++ "/org/mpris/MediaPlayer2 org.mpri
 spotifyNext = spotifyRootCommand ++ "/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 main = do
-    xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig { terminal = "urxvt"
                            , startupHook = setWMName "LG3D"
                            , manageHook = manageDocks <+> manageHook defaultConfig

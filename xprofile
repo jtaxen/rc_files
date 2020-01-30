@@ -8,7 +8,7 @@ feh --bg-scale "$HOME/Pictures/iwanttobelieve.png"
 
 ### KEYBOARD ###
 
-setxkbmap -layout ok
+#setxkbmap -layout ok
 
 # Change Caps Lock to ctrl
 setxkbmap -option ctrl:nocaps

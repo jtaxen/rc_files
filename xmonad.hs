@@ -15,7 +15,7 @@ main = do
                            , startupHook = setWMName "LG3D"
                            , manageHook = manageDocks <+> manageHook defaultConfig
                            , layoutHook = avoidStruts $ layoutHook defaultConfig
-                           , borderWidth = 0
+                           , borderWidth = 2
     } `additionalKeys` myKeys
   where
     myKeys = [ ((myModMask, xK_u), spawn "slock")

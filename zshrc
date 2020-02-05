@@ -57,8 +57,8 @@ alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
 # fzf
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh
+#source /usr/share/fzf/key-bindings.zsh
 
 # Use fd instead of find as fzf engine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -23,6 +23,7 @@ plugins=(
     history
     kubectl
     microk8s
+    minikube
     npm
     tmux
     vi-mode

@@ -19,6 +19,8 @@ call vundle#begin()
     " Fuzzy search files
     Plugin 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
     Plugin 'junegunn/fzf.vim'
+    " TypeScript
+    Plugin 'leafgarland/typescript-vim'
     " Ack - like perl-grep
     Plugin 'mileszs/ack.vim'
     " Find defenitions of vars, funcs etc

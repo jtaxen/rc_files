@@ -55,6 +55,10 @@ set ruler
 set backspace=indent,eol,start
 set tabstop=4 shiftwidth=4
 
+autocmd FileType typescript :set tabstop=2 shiftwidth=2
+autocmd FileType json :set tabstop=2 shiftwidth=2
+autocmd FileType yaml :set tabstop=2 shiftwidth=2
+
 " Defenition search with vim-definitive
 noremap gD :FindDefinition<CR>
 

@@ -15,10 +15,15 @@ ZSH_TMUX_AUTOSTART=true
 # Oh-my-zsh plugins
 plugins=(
     docker
+    docker-compose
     extract
     fzf
     git
+    helm
     history
+    kubectl
+    microk8s
+    npm
     tmux
     vi-mode
     web-search

@@ -37,7 +37,7 @@ call vundle#begin()
     " Code completion
     Plugin 'valloric/youcompleteme'
     " Syntax checking
-    Plugin 'vim-syntastic/syntastic'
+    " Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin indent on
 
@@ -123,15 +123,16 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " Syntastic shortcuts
-noremap <C-f> :SyntasticReset<CR>
+" noremap <C-f> :SyntasticReset<CR>
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_disabled_filetypes=['java']
 
 " Syntastic checkers
-let g:syntastic_python_checkers = ['flake8']
+" let g:syntastic_python_checkers = ['flake8']
 
 " Recommended settings for Elm plugin
 let g:elm_syntastic_show_warnings = 1

@@ -1,10 +1,5 @@
-### MONITORS @@@
-# if [ -n  "$(xrandr | grep 'HDMI1 connected')" ]; then
-    #xrandr --output HDMI1 --mode 2560x1440
-#fi
-
 # Set wallpaper
-#feh --bg-scale "$HOME/Pictures/iwanttobelieve.png"
+feh --bg-scale "$HOME/Pictures/iwanttobelieve.png"
 
 ### KEYBOARD ###
 
@@ -17,8 +12,7 @@ setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'
 
 
-
 ### MOUSE ###
-keynav
+keynav daemonize
 unclutter &
 

@@ -51,6 +51,7 @@ bindkey -M vicmd 'l' vi-insert
 bindkey -M vicmd 'j' vi-put-after
 bindkey -M vicmd 'J' vi-put-before
 bindkey -M vicmd 'N' vi-join
+bindkey -M vicmd 'v' edit-command-line
 
 # SSH
 export SSH_KEY_PATH='~/.ssh/id_rsa'

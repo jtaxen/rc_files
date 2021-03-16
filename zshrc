@@ -24,6 +24,7 @@ plugins=(
     kubectl
     microk8s
     minikube
+    mvn
     npm
     tmux
     vi-mode

@@ -21,6 +21,7 @@ plugins=(
     git
     helm
     history
+    timer
     kubectl
     microk8s
     minikube

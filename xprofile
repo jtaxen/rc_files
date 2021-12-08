@@ -1,14 +1,14 @@
+### Turn off annoying beep/click
+xset b off
+
+
 ### MONITORS @@@
 if [ -n  "$(xrandr | grep 'HDMI1 connected')" ]; then
     xrandr --output HDMI1 --mode 2560x1440
 fi
-
-# Set wallpaper
-feh --bg-scale "$HOME/Pictures/iwanttobelieve.png"
-
 ### KEYBOARD ###
 
-#setxkbmap -layout ok
+setxkbmap -layout ok
 
 # Change Caps Lock to ctrl
 setxkbmap -option ctrl:nocaps
@@ -19,6 +19,5 @@ xcape -e 'Control_L=Escape'
 
 
 ### MOUSE ###
-keynav
 unclutter &
 

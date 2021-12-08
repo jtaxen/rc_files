@@ -1,4 +1,4 @@
-
-rofi.theme: /usr/share/rofi/themes/papercolor.rasi
-
-rofi*font: FantasqueSansMono 11
+configuration {
+    theme: "papercolor";
+    font: "FantasqueSansMono 11";
+}

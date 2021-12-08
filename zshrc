@@ -19,11 +19,15 @@ plugins=(
     fzf
     git
     history
+    kubectl
+    helm
+    microk8s
     tmux
     vi-mode
     web-search
     z
 )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,6 +70,13 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 
 # Shortcut for activating virtualenvs
 vactivate() {
+    if [ $(which pipenv ) ]; then
+        if [ $(pipenv --venv ) ]; then
+            pipenv shell
+            return 0
+        fi
+    fi
+
     VENV_PATH="bin/activate"
     if [ -f $VENV_PATH ]; then
         source $VENV_PATH

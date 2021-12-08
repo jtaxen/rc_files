@@ -59,6 +59,7 @@ noremap gD :FindDefinition<CR>
 " Do not expand tab if the file type is .sh
 set expandtab
 autocmd FileType sh :set noexpandtab
+autocmd FileType typescript set tabstop=2|shiftwidth=2
 
 " Remove trailing whitespaces before saving
 autocmd BufWritePre * %s/\s\+$//e

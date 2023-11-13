@@ -81,6 +81,9 @@ iabbrev <// </<C-X><C-O>
 command! Xxd %!xxd
 command! Xxdr %!xxd -r
 
+" Format json
+command! Jq %!jq .
+
 " Map key to toggle opt
 function MapToggle(key, opt)
   let cmd = ':set '.a:opt.'! \| set '.a:opt."?\<CR>"
@@ -125,6 +128,7 @@ noremap E i<Enter>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:airline_powerline_fonts = 1
 
 " Syntastic shortcuts
 " noremap <C-f> :SyntasticReset<CR>
@@ -163,17 +167,21 @@ set noshowmode
 
 " Color theme settings
 set background=light
-" let g:PaperColor_Theme_Options = {
-" \    'theme': {
-" \        'default.light': {
-" \            'override': {
-" \                'color00': ['#E0E0E0', '']
-" \            }
-" \        }
-" \    }
-" \}
-colorscheme PaperColor
+ let g:PaperColor_Theme_Options = {
+ \    'theme': {
+ \        'default.light': {
+ \            'override': {
+ \                'color00': ['#E0E0E0', '']
+ \            }
+ \        }
+ \    }
+ \}
+"colorscheme delek
 let g:airline_theme='papercolor'
 
+hi Visual guifg=#000000 guibg=#ffffff
+hi Pmenu ctermfg=black ctermbg=white
+
 set visualbell
+set t_vb=
 set noerrorbells

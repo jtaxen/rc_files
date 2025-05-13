@@ -21,12 +21,14 @@ plugins=(
     git
     helm
     history
+    httpie
     timer
     kubectl
     microk8s
     minikube
     mvn
     npm
+    pip
     tmux
     vi-mode
     web-search
@@ -66,8 +68,8 @@ alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
 # fzf
-#source /usr/share/fzf/completion.zsh
-#source /usr/share/fzf/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Use fd instead of find as fzf engine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

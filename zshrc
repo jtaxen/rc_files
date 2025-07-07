@@ -19,6 +19,7 @@ plugins=(
     extract
     fzf
     git
+    gh
     helm
     history
     httpie
@@ -38,7 +39,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for remote and local sessions
-export EDITOR='vim'
+export EDITOR='nvim'
+alias vim='nvim'
 
 # Vi mode settings
 export KEYTIMEOUT=10
@@ -59,6 +61,10 @@ bindkey -M vicmd 'v' edit-command-line
 # SSH
 export SSH_KEY_PATH='~/.ssh/id_rsa'
 
+# Pager
+export PAGER=less
+export LESS=FRX
+
 alias :q=exit
 
 # Aliases for spotifycli commands
@@ -68,8 +74,8 @@ alias spr='spotifycli --prev && sleep 1 && sst'
 alias spp='spotifycli --playpause'
 
 # fzf
-source /usr/share/doc/fzf/examples/completion.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 # Use fd instead of find as fzf engine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

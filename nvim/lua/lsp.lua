@@ -8,9 +8,7 @@ require('mason').setup({
     }
 })
 
-require('mason-lspconfig').setup({
-    ensure_installed = { 'pylsp', 'lua_ls', 'clangd', 'texlab' }
-})
+require('mason-lspconfig').setup()
 
 local lspconfig = require('lspconfig')
 
@@ -45,8 +43,8 @@ local on_attach = function(client, bufnr)
 end
 
 lspconfig.pylsp.setup({
-    on_attach = on_attach,
-    settings = {
+    on_attach=on_attach,
+    settings={
         pylsp = {
             plugins = {
                 flake8 = { enabled = false },
@@ -55,13 +53,38 @@ lspconfig.pylsp.setup({
                 yapf = { enabled = false },
                 pylint = { enabled = false },
                 pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
+                pycodestyple = { enabled = false },
                 pylsp_mypy = { enabled = false },
-                jedi_completion = {fuzzy = false },
+                jedi_completion = { enabled = true },
                 pyls_isort = { enabled = false },
             }
-        },
+        }
+    }
+})
+
+lspconfig.lua_ls.setup({
+    on_attach = on_attach,
+    settings = {
+        Lua = {
+            diagnostics = { enable = false }
+        }
+    }
+})
+
+lspconfig.groovyls.setup({
+    on_attach = on_attach,
+    cmd = {
+        'java',
+        '-jar',
+        '/home/jatax/Source/groovy-language-server/build/libs/groovy-language-server-all.jar',
+    },
+    filetypes = {
+        'groovy',
+        'Jenkinsfile',
     },
 })
 
-lspconfig.texlab.setup({})
+
+lspconfig.gopls.setup({
+    on_attach = on_attach,
+})

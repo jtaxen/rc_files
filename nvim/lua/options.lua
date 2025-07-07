@@ -1,6 +1,6 @@
 vim.opt.clipboard = 'unnamedplus'	-- use system clipboard
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-vim.opt.mouse = 'n'			-- disallow mouse
+vim.opt.mouse = ''			-- disallow mouse
 
 -- Tab
 vim.opt.tabstop = 4
@@ -19,5 +19,10 @@ vim.opt.showmode = true
 -- Searching
 vim.opt.incsearch = true        -- search as characters are entered
 vim.opt.hlsearch = true         -- highlight matches
-vim.opt.ignorecase = false      
+vim.opt.ignorecase = false
 vim.opt.smartcase = false       -- makes search case sensitive if ignorecase and an uppercase is entered
+
+-- Command line
+vim.opt.wildmenu = on
+vim.opt.wildmode = "noselect:longest,longest,full"
+--vim.opt.wildoptions = ""

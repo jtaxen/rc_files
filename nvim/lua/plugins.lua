@@ -17,31 +17,29 @@ require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     {
         "neovim/nvim-lspconfig",
-        dependencies = { "saghen/blink.cmp" },
+        lazy = false,
+        dependencies = {
+            { "ms-jpq/coq_nvim", branch = "coq" },
+        },
+        init = function()
+            vim.g.coq_settings = {
+                auto_start = "shut-up",
+            }
+        end,
     },
     -- colorschemes
     {'savq/melange-nvim', name='melange'},
-    -- autocompletion
+    -- indentation indicator
     {
-        "saghen/blink.cmp",
-        version = "*",
-        opts = {
-            keymap = {
-                preset = "enter",
-                ["<Tab>"] = { "select_next", "fallback" },
-                ["<S-Tab>"] = { "select_prev", "fallback" },
-            },
-            completion = {
-                keyword = { range = "prefix" },
-                documentation = {
-                    auto_show = true,
-                },
-                accept = { 
-                    auto_brackets = { enabled = false },
-                },
-            },
-            signature = { enabled = true },
-        },
-        opts_extend = { "sources.default" },
+        "lukas-reineke/indent-blankline.nvim",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        main = "ibl",
+        opts = {},
+    },
+    -- outline window
+    {
+        'stevearc/aerial.nvim',
+        opts = {},
+        dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
 })

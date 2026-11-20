@@ -12,7 +12,7 @@ NCOLOR="green"
 ### FUNCTIONS
 
 #
-# hostmane_in_prompt
+# hostname_in_prompt
 #
 # If the current session is an SSH session, show the hostname in the prompt.
 #

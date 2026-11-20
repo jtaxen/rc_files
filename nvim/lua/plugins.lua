@@ -13,19 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- LSP manager
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    {
-        "neovim/nvim-lspconfig",
-        lazy = false,
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/nvim-cmp',
         dependencies = {
-            { "ms-jpq/coq_nvim", branch = "coq" },
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'L3MON4D3/luasnip',
         },
-        init = function()
-            vim.g.coq_settings = {
-                auto_start = "shut-up",
-            }
-        end,
     },
     -- colorschemes
     {'savq/melange-nvim', name='melange'},
@@ -35,11 +31,5 @@ require("lazy").setup({
         dependencies = { "nvim-treesitter/nvim-treesitter" },
         main = "ibl",
         opts = {},
-    },
-    -- outline window
-    {
-        'stevearc/aerial.nvim',
-        opts = {},
-        dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
 })

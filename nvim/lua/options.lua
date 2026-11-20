@@ -24,5 +24,5 @@ vim.opt.smartcase = false       -- makes search case sensitive if ignorecase and
 
 -- Command line
 vim.opt.wildmenu = on
-vim.opt.wildmode = "noselect:longest,longest,full"
+--vim.opt.wildmode = "noselect:longest,longest,full"
 --vim.opt.wildoptions = ""

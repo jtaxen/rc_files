@@ -58,24 +58,16 @@ bindkey -M vicmd 'J' vi-put-before
 bindkey -M vicmd 'N' vi-join
 bindkey -M vicmd 'v' edit-command-line
 
-# SSH
-export SSH_KEY_PATH='~/.ssh/id_rsa'
-
 # Pager
 export PAGER=less
 export LESS=FRX
 
 alias :q=exit
 
-# Aliases for spotifycli commands
-alias sst='spotifycli --status'
-alias sn='spotifycli --next && sleep 1 && sst'
-alias spr='spotifycli --prev && sleep 1 && sst'
-alias spp='spotifycli --playpause'
-
 # fzf
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+alias fd='fdfind'
 
 # Use fd instead of find as fzf engine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -102,7 +94,3 @@ extras="$HOME/.rc_files/zsh_extras"
 if [ -f $extras  ]; then
     source $extras
 fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -2,4 +2,6 @@
 --color-match=black on_yellow
 --color-filename=green
 --color-lineno=blue
+--ignore-dir=venv
+--ignore-dir=.venv
 
